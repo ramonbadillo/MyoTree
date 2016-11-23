@@ -4,10 +4,10 @@ from otree.api import (
 )
 
 
-author = 'Your name here'
+author = 'Ramon Badillo'
 
 doc = """
-Your app description
+Example app from the tutorial
 """
 
 

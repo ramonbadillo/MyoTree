@@ -64,11 +64,35 @@ LANGUAGE_CODE = 'en'
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
 INSTALLED_APPS = ['otree']
 
+
 # SENTRY_DSN = ''
 
 DEMO_PAGE_INTRO_TEXT = """
-oTree games
+<ul>
+    <li>
+        <a href="https://github.com/ramonbadillo/MyoTree" target="_blank">
+            My repository
+        </a>
+    </li>
+
+</ul>
+<p>
+
+    Here are some games from the tutorial and another examples from oTree.
+</p>
 """
+
+ROOMS = [
+    {
+        'name': 'star_wars',
+        'display_name': 'Star Wars Chars',
+        'participant_label_file': '_rooms/star_wars.txt',
+    },
+    {
+        'name': 'live_demo',
+        'display_name': 'Room for live demo (no participant labels)',
+    },
+]
 
 # from here on are qualifications requirements for workers
 # see description for requirements on Amazon Mechanical Turk website:
@@ -111,26 +135,32 @@ SESSION_CONFIGS = [
         'name': 'my_public_goods',
         'display_name': "My Public Goods",
         'num_demo_participants': 3,
-        'app_sequence': ['my_public_goods',],
+        'app_sequence': ['my_public_goods', ],
         'use_browser_bots': False,
+    },
+    {
+        'name': 'survey',
+        'display_name': "My Survey",
+        'num_demo_participants': 1,
+        'app_sequence': ['my_survey', ],
     },
     {
         'name': 'my_trust',
         'display_name': "My Trust Game",
         'num_demo_participants': 2,
-        'app_sequence': ['my_trust',],
+        'app_sequence': ['my_trust', ],
     },
     {
         'name': 'my_matching_pennies',
         'display_name': "My Matching Pennies",
         'num_demo_participants': 2,
-        'app_sequence': ['my_matching_pennies',],
+        'app_sequence': ['my_matching_pennies', ],
     },
 {
         'name': 'all_tutorial_apps',
         'display_name': "All Tutorial Apps",
         'num_demo_participants': 6,
-        'app_sequence': ['my_public_goods','my_trust','my_matching_pennies',],
+        'app_sequence': ['my_public_goods','my_trust','my_matching_pennies', ],
     },
     # other session configs ...
 ]
