@@ -114,6 +114,12 @@ SESSION_CONFIGS = [
         'app_sequence': ['my_public_goods'],
         'use_browser_bots': False,
     },
+    {
+        'name': 'my_trust',
+        'display_name': "My Trust Game",
+        'num_demo_participants': 2,
+        'app_sequence': ['my_trust'],
+    },
     # other session configs ...
 ]
 
