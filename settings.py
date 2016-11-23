@@ -111,15 +111,22 @@ SESSION_CONFIGS = [
         'name': 'my_public_goods',
         'display_name': "My Public Goods",
         'num_demo_participants': 3,
-        'app_sequence': ['my_public_goods'],
+        'app_sequence': ['my_public_goods',],
         'use_browser_bots': False,
     },
     {
         'name': 'my_trust',
         'display_name': "My Trust Game",
         'num_demo_participants': 2,
-        'app_sequence': ['my_trust'],
+        'app_sequence': ['my_trust',],
     },
+    {
+        'name': 'my_matching_pennies',
+        'display_name': "My Matching Pennies",
+        'num_demo_participants': 2,
+        'app_sequence': ['my_matching_pennies',],
+    },
+    
     # other session configs ...
 ]
 
