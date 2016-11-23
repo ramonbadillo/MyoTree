@@ -107,12 +107,14 @@ SESSION_CONFIG_DEFAULTS = {
 
 
 SESSION_CONFIGS = [
-    # {
-    #     'name': '...',
-    #     'display_name': '...',
-    #     'num_demo_participants': ...,
-    #     'app_sequence': ['...'],
-    # }
+    {
+        'name': 'my_public_goods',
+        'display_name': "My Public Goods",
+        'num_demo_participants': 3,
+        'app_sequence': ['my_public_goods'],
+        'use_browser_bots': False,
+    },
+    # other session configs ...
 ]
 
 # anything you put after the below line will override
