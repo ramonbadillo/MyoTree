@@ -126,7 +126,12 @@ SESSION_CONFIGS = [
         'num_demo_participants': 2,
         'app_sequence': ['my_matching_pennies',],
     },
-    
+{
+        'name': 'all_tutorial_apps',
+        'display_name': "All Tutorial Apps",
+        'num_demo_participants': 6,
+        'app_sequence': ['my_public_goods','my_trust','my_matching_pennies',],
+    },
     # other session configs ...
 ]
 
