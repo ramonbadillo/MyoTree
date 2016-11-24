@@ -1,17 +1,8 @@
 body {
 
-    background-color: #cacaca;
+
 }
 
-ul {
-	min-width: 696px;
-	list-style: none;
-	padding-top: 20px;
-	}
-ul li {
-    margin-right: 20px;
-    display: inline;
-	}
 
 input[type='radio']:after {
     width: 15px;
@@ -34,7 +25,7 @@ input[type='radio']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: #000000;
+    background-color: #306D85;
     content: '';
     display: inline-block;
     visibility: visible;

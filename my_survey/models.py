@@ -46,7 +46,9 @@ class Player(BasePlayer):
         verbose_name='''
         A bat and a ball cost 22 dollars in total.
         The bat costs 20 dollars more than the ball.
-        How many dollars does the ball cost?'''
+        How many dollars does the ball cost?''',
+        min = 0,
+        max =20
     )
 
     sw_widget = models.PositiveIntegerField(
@@ -56,11 +58,11 @@ class Player(BasePlayer):
         '''
     )
 
-    sw_choices = models.PositiveIntegerField(
+    sw_choices = models.CharField(
         initial=None,
         choices=['0 Worst', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10 Best'],
         verbose_name='How good was it?',
-        widget=widgets.RadioSelect()
+        widget=widgets.RadioSelectHorizontal()
     )
     sw_lake = models.PositiveIntegerField(
         verbose_name='''
@@ -70,3 +72,23 @@ class Player(BasePlayer):
         how many days would it take for the patch to cover half of the lake?
         '''
     )
+    sw_level = models.PositiveIntegerField(
+        verbose_name='set the level',
+        choices=[
+            [1, 'Low'],
+            [2, 'Medium'],
+            [3, 'High'],
+        ]
+    )
+    sw_slider = models.PositiveIntegerField(
+        verbose_name='set the slider',
+        widget=widgets.SliderInput(attrs={'step': '0.01'})
+
+    )
+
+    offer_1 = models.BooleanField()
+    offer_2 = models.BooleanField()
+    offer_3 = models.BooleanField()
+    offer_4 = models.BooleanField()
+    offer_5 = models.BooleanField()
+

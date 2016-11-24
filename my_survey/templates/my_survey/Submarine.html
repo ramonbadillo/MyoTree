@@ -1,0 +1,25 @@
+{% extends "global/Base.html" %}
+
+{% load staticfiles otree_tags %}
+{% block styles %}
+    <link href="{% static "global/style.css" %}" rel="stylesheet">
+    <link href="{% static "global/css/font-awesome.css" %}" rel="stylesheet">
+    <link href="{% static "global/submarine.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Star Wars Survey
+{% endblock %}
+
+{% block content %}
+<p>HOLA</p>
+
+<div class="stage">
+  <figure class="ball"></figure>
+</div>
+<br>
+
+{% next_button %}
+
+{% endblock %}
+
