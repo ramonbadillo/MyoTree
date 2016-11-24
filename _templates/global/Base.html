@@ -1,7 +1,10 @@
 {% extends "otree/FormPage.html" %}
 {% load staticfiles otree_tags %}
 
-
+{% block styles %}
+    <link href="{% static "global/style.css" %}" rel="stylesheet">
+    <link href="{% static "global/css/font-awesome.css" %}" rel="stylesheet">
+{% endblock %}
 {% block global_styles  %}
 {% endblock %}
 

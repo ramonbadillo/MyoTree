@@ -12,17 +12,18 @@ class Demographics(Page):
                   'q_gender']
 
 
-class CognitiveReflectionTest(Page):
+class StarWarsTest(Page):
 
     form_model = models.Player
-    form_fields = ['crt_bat',
-                  'crt_widget',
-                  'crt_lake']
+    form_fields = ['sw_bat',
+                  'sw_widget',
+                  'sw_choices',
+                  'sw_lake']
 
     def before_next_page(self):
         self.player.set_payoff()
 
 page_sequence = [
     Demographics,
-    CognitiveReflectionTest
+    StarWarsTest
 ]

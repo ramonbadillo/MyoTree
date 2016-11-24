@@ -2,18 +2,19 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Survey
+    Star Wars Survey
 {% endblock %}
 
 {% block content %}
 
     <p>
-        Please answer the following questions.
+        Please answer the following questions. <i class="fa fa-smile-o" aria-hidden="true"></i>
     </p>
 
     {% for field in form %}
         {% formfield field %}
     {% endfor %}
+
 
     {% next_button %}
 

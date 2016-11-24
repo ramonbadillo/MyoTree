@@ -9,7 +9,7 @@ from django_countries.fields import CountryField
 author = 'Ramon Badillo'
 
 doc = """
-Survey
+Star Wars Survey
 """
 
 
@@ -41,21 +41,28 @@ class Player(BasePlayer):
                                 verbose_name='What is your gender?',
                                 widget=widgets.RadioSelect())
 
-    crt_bat = models.PositiveIntegerField(
+
+    sw_bat = models.PositiveIntegerField(
         verbose_name='''
         A bat and a ball cost 22 dollars in total.
         The bat costs 20 dollars more than the ball.
         How many dollars does the ball cost?'''
     )
 
-    crt_widget = models.PositiveIntegerField(
+    sw_widget = models.PositiveIntegerField(
         verbose_name='''
         "If it takes 5 machines 5 minutes to make 5 widgets,
         how many minutes would it take 100 machines to make 100 widgets?"
         '''
     )
 
-    crt_lake = models.PositiveIntegerField(
+    sw_choices = models.PositiveIntegerField(
+        initial=None,
+        choices=['0 Worst', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10 Best'],
+        verbose_name='How good was it?',
+        widget=widgets.RadioSelect()
+    )
+    sw_lake = models.PositiveIntegerField(
         verbose_name='''
         In a lake, there is a patch of lily pads.
         Every day, the patch doubles in size.
